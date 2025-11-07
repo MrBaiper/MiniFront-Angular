@@ -1,0 +1,145 @@
+/* Fondo general */
+.contacts-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #007bff, #00bcd4);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 3rem 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Tarjeta principal */
+.contacts-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 900px;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Encabezado con botones */
+.contacts-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.contacts-header h2 {
+  margin: 0;
+  color: #333;
+  font-size: 1.6rem;
+}
+
+.subtitle {
+  color: #666;
+  margin: 0.3rem 0 0;
+  font-size: 0.95rem;
+}
+
+/* Botones */
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, #007bff, #00bcd4);
+  color: white;
+}
+
+.btn.primary:hover {
+  background: linear-gradient(135deg, #0069d9, #00acc1);
+  transform: translateY(-2px);
+}
+
+.btn.secondary {
+  background: #f5f6f8;
+  color: #007bff;
+  border: 1px solid #cfd8dc;
+}
+
+.btn.secondary:hover {
+  background: #e3f2fd;
+  transform: translateY(-2px);
+}
+
+/* Tabla */
+.contacts-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.contacts-table thead {
+  background-color: #007bff;
+  color: white;
+}
+
+.contacts-table th,
+.contacts-table td {
+  padding: 0.9rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.contacts-table tbody tr:hover {
+  background-color: #f9f9f9;
+  transition: background 0.2s ease;
+}
+
+/* Estado vacío */
+.no-data {
+  text-align: center;
+  padding: 2rem 0;
+  color: #666;
+  font-style: italic;
+}
+
+/* Cargando */
+.loading {
+  text-align: center;
+  color: #007bff;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .contacts-card {
+    padding: 1.5rem;
+  }
+
+  .contacts-table th,
+  .contacts-table td {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+  }
+}

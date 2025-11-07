@@ -1,0 +1,25 @@
+<div class="bulk-wrapper">
+  <div class="bulk-card">
+    <h2 class="title">Carga Masiva de Contactos</h2>
+    <p class="subtitle">
+      Pega tu JSON con los contactos y envíalo para procesarlo
+    </p>
+
+    <div class="upload-area">
+      <textarea
+        [(ngModel)]="jsonInput"
+        placeholder='Ejemplo: {"rows":[{"nombre":"Ana","celular":"3001112233","placa":"ABC123"}]}'
+      ></textarea>
+    </div>
+
+    <button class="btn-submit" (click)="onSubmit()">Enviar</button>
+
+    <div *ngIf="successMessage" class="alert success">
+      {{ successMessage }}
+    </div>
+
+    <div *ngIf="errorMessage" class="alert error">
+      {{ errorMessage }}
+    </div>
+  </div>
+</div>

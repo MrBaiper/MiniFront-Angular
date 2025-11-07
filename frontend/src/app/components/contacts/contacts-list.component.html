@@ -1,0 +1,42 @@
+<div class="contacts-wrapper">
+  <div class="contacts-card">
+    <div class="contacts-header">
+      <div>
+        <h2>Lista de Contactos</h2>
+        <p class="subtitle">Gestiona y revisa tus contactos registrados</p>
+      </div>
+
+      <div class="actions">
+        <button routerLink="/contacts/create" class="btn primary">Nuevo</button>
+        <button routerLink="/contacts/bulk" class="btn secondary">Carga Masiva</button>
+      </div>
+    </div>
+
+    <div *ngIf="loading" class="loading">Cargando...</div>
+
+    <div *ngIf="!loading && contacts.length; else noContacts">
+      <table class="contacts-table">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Celular</th>
+            <th>Placa</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let c of contacts">
+            <td>{{ c.nombre }}</td>
+            <td>{{ c.celular }}</td>
+            <td>{{ c.placa }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <ng-template #noContacts>
+      <div class="no-data">
+        <p>No hay contactos registrados aún.</p>
+      </div>
+    </ng-template>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+<div class="create-wrapper">
+  <div class="create-card">
+    <h2 class="title">Nuevo Contacto</h2>
+    <p class="subtitle">Completa los datos para agregar un nuevo contacto</p>
+
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+      <div class="form-group">
+        <label>Nombre</label>
+        <input
+          formControlName="nombre"
+          placeholder="Nombre completo"
+          type="text"
+        />
+      </div>
+
+      <div class="form-group">
+        <label>Celular</label>
+        <input
+          formControlName="celular"
+          placeholder="Número de celular"
+          type="text"
+        />
+      </div>
+
+      <div class="form-group">
+        <label>Placa</label>
+        <input
+          formControlName="placa"
+          placeholder="Placa del vehículo"
+          type="text"
+        />
+      </div>
+
+      <button type="submit" class="btn-submit" [disabled]="contactForm.invalid">
+        Guardar Contacto
+      </button>
+    </form>
+
+    <div *ngIf="successMessage" class="alert success">
+      {{ successMessage }}
+    </div>
+    <div *ngIf="errorMessage" class="alert error">
+      {{ errorMessage }}
+    </div>
+  </div>
+</div>
