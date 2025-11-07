@@ -28,7 +28,6 @@ API Laravel
 
 ### ⚙️ Instalación y Configuración
 
-
 git clone https://github.com/MrBaiper/MiniFront-Angular.git
 
 cd frontend
@@ -39,12 +38,9 @@ npm install
         Angular CLI v11 (npm install -g @angular/cli@11)
     )
 
-
 ### 🧪 Ejecución del Proyecto
 
 ng serve
-
-
 
 ### 🔐 Endpoints Principales (API Laravel)
 
@@ -56,8 +52,6 @@ ng serve
 | POST   | /contacts/bulk | Carga masiva de contactos |
 
 
-
-
 ### 🧾 Testing en Local
 
 Login: ![Login](image.png)
@@ -67,3 +61,4 @@ Listado: ![Listado](image-1.png)
 Creacion: ![Creacion](image-2.png)
 
 Carga Masiva: ![Carga](image-3.png)
+
